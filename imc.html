@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de Consumo</title>
+</head>
+<body>
+      <h1>Calculo de Consumo</h1>
+      <h3>Álcool ou Gasolina</h3>
+      <script>
+         
+         var pulaLinha = function() {
+            document.write("<br><hr><br>");
+        };
+
+        var mostra = function(frase) {
+            document.write("<big>" + frase + "</big>");
+            pulaLinha();
+        };
+
+        var imc = function(peso, altura){
+
+            let imc = peso / (altura * altura);
+
+            return imc;
+        }
+
+        var nome = prompt("Boa tarde, qual seu nome?");
+        var alturaDoUsuario = prompt(nome + ", qual é a sua altura?");
+        var pesoDoUsuario   = prompt("E o seu peso?");
+        var idImc =  imc(pesoDoUsuario,alturaDoUsuario);
+          
+          //mostra("meu IMC é: " +  imc(94, 1.80));
+          mostra(nome + " seu imc é " + idImc.toFixed(2));
+          mostra(nome + " você ainda esta " + (idImc - 18.5) + " pontos acima do limite da magreza.");
+          mostra(nome + " você ainda esta " + (35 - idImc) + " pontos acima do limite da obseidade servera.");
+        
+      </script>
+</body>
+</html>
+
+
+
